@@ -1,37 +1,30 @@
 
 
-/* Style the container for the gallery */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-  gap: 20px; /* Spacing between items */
-  margin: 20px; /* Add some margin around the gallery */
-}
-
-/* Style individual gallery items */
-.galleryItem {
-  overflow: hidden;
-  position: relative;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-/* Style the images inside gallery items */
-.galleryItem img {
-  width: 100%;
-  height: auto;
+.imgs{
+  max-width: 100%;
   display: block;
+  gridRowEnd: span 26;
 }
 
-/* Add some hover effect on gallery items */
-.galleryItem:hover {
-  transform: scale(1.05);
+.figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  break-inside: avoid;
 }
 
-/* Make it responsive by adjusting column count */
-@media (max-width: 768px) {
-  .gallery {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust column count for smaller screens */
-  }
+.figure > img {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+
+.container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: masonry;
+  height: 200vh;
+  align-tracks: stretch ;
 }

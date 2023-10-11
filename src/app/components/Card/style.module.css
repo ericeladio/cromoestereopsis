@@ -1,0 +1,22 @@
+    .svgFilters {
+    height: 0;
+    left: -9999em;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 0;
+  }
+  
+  .img {
+    margin: 5px;
+    width: 95%;
+    height: 95%;
+    object-fit: cover;
+  }
+  
+  
+  .cromoFilter {
+    filter:url('#cromo-filter');
+  }
+
+ 
